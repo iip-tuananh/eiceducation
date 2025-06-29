@@ -150,7 +150,7 @@
             </div>
             <div class="col-lg-4">
                <p class="text-white">
-                  Nhanh chóng & Đúng hẹn: Mạng lưới vận chuyển rộng khắp, đảm bảo giao hàng đúng thời gian cam kết.Dịch vụ tối ưu, giá cả cạnh tranh giúp doanh nghiệp tiết kiệm chi phí logistics.
+                  Với mạng lưới hợp tác gồm 3000+ Trường Đại học, Cao đẳng và THPT liên kết thế giới, EIC Education Việt Nam luôn định hướng phát triển dịch vụ giáo dục chất lượng cao, chúng tôi tập trung hoạt động trong các lĩnh vực sau:
                </p>
             </div>
             <div class="col-lg-2">
@@ -284,26 +284,28 @@
                      <span class="site-title-tagline"><i class="fas fa-school"></i> Why Choose Us</span>
                      <h2 class="site-title">Tại sao nên chọn <span>EIC EDUCATION</span></h2>
                      <p>
-                        Duy trì tính chuyên nghiệp, trung thực và minh bạch trong mọi hoạt động, tạo dựng niềm tin vững chắc và sự tin cậy từ khách hàng.
+                        EIC Education mang lại giải pháp du học uy tín và chuyên nghiệp nhất cho khách hàng. Chúng tôi sẽ đồng hành cùng các bạn trên chặng đường phía trước với giấc mơ du học trong tầm tay, mọi thủ tục và chi phí sẽ được tối ưu nhất.
                      </p>
                   </div>
                   <div class="choose-content-wrap">
                      <div class="choose-item">
                         <div class="choose-item-icon">
-                           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="{{url('frontend/img/money.svg')}}" alt="image">
+                           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="{{url('frontend/img/support.svg')}}" alt="image">
                         </div>
                         <div class="choose-item-info">
-                           <h4>Đội ngũ chuyên gia giàu kinh nghiệm</h4>
-                           <p>Đội ngũ tư vấn viên am hiểu về hệ thống giáo dục và quy trình xin visa của từng quốc gia.</p>
+                           <h4>TƯ VẤN MIỄN PHÍ</h4>
+                           <p>Nhận lộ trình du học từ A đến Z MIỄN PHÍ cùng Chuyên gia dày dặn kinh nghiệm
+                           </p>
                         </div>
                      </div>
                      <div class="choose-item">
                         <div class="choose-item-icon">
-                           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="{{url('frontend/img/team.svg')}}" alt="image">
+                           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="{{url('frontend/img/support.svg')}}" alt="image">
                         </div>
                         <div class="choose-item-info">
-                           <h4>Hỗ trợ tận tình từ A-Z</h4>
-                           <p>Hỗ trợ học viên từ bước đầu làm hồ sơ đến khi ổn định tại nước ngoài.</p>
+                           <h4>HỖ TRỢ NHANH CHÓNG, CHÍNH XÁC, THUẬN TIỆN</h4>
+                           <p>Xây dựng lộ trình du học NHANH CHÓNG - CHÍNH XÁC - PHÙ HỢP cho từng học viên
+                           </p>
                         </div>
                      </div>
                      <div class="choose-item">
@@ -311,8 +313,31 @@
                            <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="{{url('frontend/img/certified.svg')}}" alt="image">
                         </div>
                         <div class="choose-item-info">
-                           <h4>Mạng lưới đối tác rộng khắp</h4>
-                           <p> Hợp tác với nhiều trường đại học danh tiếng và tổ chức giáo dục uy tín trên thế giới.</p>
+                           <h4>KHO HỌC BỔNG 100% ĐỘC QUYỀN</h4>
+                           <p> Cập nhật liên tục HỌC BỔNG 100%
+                           </p>
+                        </div>
+                     </div>
+                     <div class="choose-item">
+                        <div class="choose-item-icon">
+                           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="{{url('frontend/img/team.svg')}}" alt="image">
+                        </div>
+                        <div class="choose-item-info">
+                           <h4>REVIEW HỒ SƠ 1:1 CÙNG CHUYÊN GIA</h4>
+                           <p> Chuyên gia hàng đầu tại EIC giàu KINH NGHIỆM - CHUYÊN NGHIỆP review & hướng dẫn chuẩn bị hồ sơ du học
+
+                           </p>
+                        </div>
+                     </div>
+                     <div class="choose-item">
+                        <div class="choose-item-icon">
+                           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="{{url('frontend/img/support.svg.svg')}}" alt="image">
+                        </div>
+                        <div class="choose-item-info">
+                           <h4>HỖ TRỢ TOÀN DIỆN TỪ A-Z</h4>
+                           <p> Tư vấn chi tiết mọi bước từ APPLY đến HOÀN THIỆN thủ tục 
+
+                           </p>
                         </div>
                      </div>
                   </div>
@@ -336,9 +361,9 @@
             <div class="col-lg-4">
                <div class="site-heading wow fadeInDown" data-wow-delay=".25s">
                   <span class="site-title-tagline"><i class="fas fa-school"></i> Testimonials</span>
-                  <h2 class="site-title text-white">Khách hàng nói gì về <span>EIC EDUCATION</span> </h2>
+                  <h2 class="site-title text-white">Khách hàng nói gì về EIC EDUCATION </h2>
                   <p class="text-white">
-                     Luôn đặt khách hàng làm trọng tâm, hiểu rõ nhu cầu của họ và cung cấp các dịch vụ vượt xa mong đợi, đảm bảo sự hài lòng tuyệt đối.
+                     Luôn đặt khách hàng làm trọng tâm, EIC Education mang đến sự khác biệt rõ rệt trong hành trình du học của bạn.
                   </p>
                </div>
             </div>
@@ -368,7 +393,7 @@
                         </div>
                         <div class="testimonial-author-info">
                            <h4>{{languageName($item->name)}}</h4>
-                           <p>{{languageName($item->position)}}</p>
+                           <p class="text-white">{{languageName($item->position)}}</p>
                         </div>
                      </div>
                   </div>

@@ -55,7 +55,7 @@
       <link rel="stylesheet" href="{{ env('AWS_R2_URL') }}/frontend/css/magnific-popup.min.css">
       <link rel="stylesheet" href="{{ env('AWS_R2_URL') }}/frontend/css/owl.carousel.min.css">
       <link rel="stylesheet" href="{{ env('AWS_R2_URL') }}/frontend/css/nice-select.min.css">
-      <link rel="stylesheet" href="{{ env('AWS_R2_URL') }}/frontend/css/style.css"> 
+      <link rel="stylesheet" href="/frontend/css/style.css"> 
       <link rel="stylesheet" href="{{ env('AWS_R2_URL') }}/frontend/css/callbutton.css">
       <script src="{{ env('AWS_R2_URL') }}/frontend/js/jquery-3.7.1.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
