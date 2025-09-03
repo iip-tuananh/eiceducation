@@ -12,17 +12,28 @@
                   placeholder="Tên bài viết"
                   class="w-100"
                   v-model="objData.name"
+                  :maxlength="60"
                 />
+                <div class="character-count" style="text-align: right; font-size: 12px; color: #666; margin-top: 5px;">
+                <span :class="{'text-danger': nameCharCount > 60}">
+                  {{ nameCharCount }}/60 ký tự
+                </span>
+              </div>  
               </div>
               <div class="form-group">
                 <label>Mô tả ngắn</label>
-                <vs-input
-                  type="text"
+                <vs-textarea
                   size="default"
-                  placeholder="Tên bài viết"
+                  placeholder="Mô tả ngắn"
                   class="w-100"
                   v-model="objData.description"
+                  :maxlength="160"
                 />
+                <div class="character-count" style="text-align: right; font-size: 12px; color: #666; margin-top: 5px;">
+                <span :class="{'text-danger': descriptionCharCount > 160}">
+                  {{ descriptionCharCount }}/160 ký tự
+                </span>
+              </div>  
               </div>
               <div class="form-group">
                 <label>Nội dung</label>
@@ -87,7 +98,14 @@ export default {
   },
   components: {TinyMce
   },
-  computed: {},
+  computed: {
+    nameCharCount() {
+      return this.objData.name ? this.objData.name.length : 0;
+    },
+    descriptionCharCount() {
+      return this.objData.description ? this.objData.description.length : 0;
+    }
+  },
   watch: {},
   methods: {
     ...mapActions(["addPromotion", "loadings"]),

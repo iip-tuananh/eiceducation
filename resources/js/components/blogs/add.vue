@@ -12,26 +12,29 @@
                 placeholder="Tên bài viết"
                 class="w-100"
                 v-model="objData.title[0].content"
+                :maxlength="60"
               />
-              <el-button size="small" @click="showSettingLangExist('name')"
-                >Đa ngôn ngữ</el-button
-              >
-              <div class="dropLanguage" v-if="showLang.title == true">
-                <div
-                  class="form-group"
-                  v-for="(item, index) in lang"
-                  :key="index"
-                >
-                  <label v-if="index != 0">{{ item.name }}</label>
-                  <input
-                    v-if="index != 0"
-                    type="text"
-                    size="default"
-                    placeholder="Tên sản phẩm"
-                    class="w-100 inputlang"
-                    v-model="objData.title[index].content"
-                  />
-                </div>
+              <div class="character-count" style="text-align: right; font-size: 12px; color: #666; margin-top: 5px;">
+                <span :class="{'text-danger': titleCharCount > 60}">
+                  {{ titleCharCount }}/60 ký tự
+                </span>
+              </div>
+            
+            </div>
+            <div class="form-group">
+              <label>Mô tả ngắn</label>
+              <vs-input
+                type="text"
+                size="default"
+                placeholder="Mô tả ngắn"
+                class="w-100"
+                v-model="objData.description[0].content"
+                :maxlength="160"
+              />
+              <div class="character-count" style="text-align: right; font-size: 12px; color: #666; margin-top: 5px;">
+                <span :class="{'text-danger': descriptionCharCount > 160}">
+                  {{ descriptionCharCount }}/160 ký tự
+                </span>
               </div>
             </div>
             <div class="form-group">
@@ -54,37 +57,7 @@
                 </div>
               </div>
             </div>
-            <div class="form-group">
-              <label>Mô tả ngắn</label>
-              <vs-input
-                type="text"
-                size="default"
-                placeholder="Tên bài viết"
-                class="w-100"
-                v-model="objData.description[0].content"
-              />
-              <el-button
-                size="small"
-                @click="showSettingLangExist('description')"
-                >Đa ngôn ngữ</el-button
-              >
-              <div class="dropLanguage" v-if="showLang.description == true">
-                <div
-                  class="form-group"
-                  v-for="(item, index) in lang"
-                  :key="index"
-                >
-                  <label v-if="index != 0">{{ item.name }}</label>
-                  <vs-input
-                    type="text"
-                    size="default"
-                    placeholder="Tên bài viết"
-                    class="w-100"
-                    v-model="objData.description[index].content"
-                  />
-                </div>
-              </div>
-            </div>
+            
             <div class="form-group">
               <label>Ảnh đại diện</label>
               <image-upload
@@ -225,7 +198,14 @@ export default {
   components: {
     TinyMce,
   },
-  computed: {},
+  computed: {
+    titleCharCount() {
+      return this.objData.title[0].content ? this.objData.title[0].content.length : 0;
+    },
+    descriptionCharCount() {
+      return this.objData.description[0].content ? this.objData.description[0].content.length : 0;
+    }
+  },
   watch: {},
   methods: {
     ...mapActions([
@@ -293,10 +273,14 @@ export default {
       this.errors = [];
       if (this.objData.title[0].content == "")
         this.errors.push("Tên không được để trống");
+      if (this.objData.title[0].content.length > 60)
+        this.errors.push("Tên bài viết không được vượt quá 60 ký tự");
       if (this.objData.content[0].content == "")
         this.errors.push("Nội dung không được để trống");
       if (this.objData.description[0].content == "")
         this.errors.push("Mô tả không được để trống");
+      if (this.objData.description[0].content.length > 160)
+        this.errors.push("Mô tả ngắn không được vượt quá 160 ký tự");
       if (this.objData.images == "") this.errors.push("Vui lòng chọn ảnh");
       if (this.objData.category == "")
         this.errors.push("Chọn danh mục sản phẩm");
@@ -330,6 +314,12 @@ export default {
       this.findTypeCateBlog(this.objData.category).then((response) => {
         this.type_cate = response.data;
       });
+    },
+    getTitleCharCount(index) {
+      return this.objData.title[index] && this.objData.title[index].content ? this.objData.title[index].content.length : 0;
+    },
+    getDescriptionCharCount(index) {
+      return this.objData.description[index] && this.objData.description[index].content ? this.objData.description[index].content.length : 0;
     },
   },
   mounted() {

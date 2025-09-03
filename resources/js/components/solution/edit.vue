@@ -6,25 +6,38 @@
             <div class="card-body">
               
               <div class="form-group">
-                <label>Tên dịch vụ</label>
-                <vs-input
-                  type="text"
-                  size="default"
-                  placeholder="Tên bài viết"
-                  class="w-100"
-                  v-model="objData.name"
+              <label>Tên dịch vụ</label>
+              <vs-input
+                type="text"
+                size="default"
+                placeholder="Tên dịch vụ"
+                class="w-100"
+                v-model="objData.name"
+                :maxlength="60"
+              />
+              <div class="character-count" style="text-align: right; font-size: 12px; color: #666; margin-top: 5px;">
+                <span :class="{'text-danger': nameCharCount > 60}">
+                  {{ nameCharCount }}/60 ký tự
+                </span>
+              </div>
+            </div>
+            <div class="form-group">
+                <label>Mô tả ngắn</label>
+                <vs-textarea 
+                  v-model="objData.description[0].content" 
+                  :maxlength="160"
                 />
+                <div class="character-count" style="text-align: right; font-size: 12px; color: #666; margin-top: 5px;">
+                  <span :class="{'text-danger': descriptionCharCount > 160}">
+                    {{ descriptionCharCount }}/160 ký tự
+                  </span>
+                </div>
               </div>
               <div class="form-group">
                 <label>Nội dung</label>
                 <TinyMce
                   v-model="objData.content[0].content"
                 />
-              </div>
-              <div class="form-group">
-                <label>Mô tả ngắn</label>
-                <vs-textarea v-model="objData.description[0].content" />
-                
               </div>
               <div class="form-group">
                 <label>Ảnh bài viết</label>
@@ -97,7 +110,14 @@ export default {
   components: {
     TinyMce,ImageMulti
   },
-  computed: {},
+  computed: {
+    nameCharCount() {
+      return this.objData.name ? this.objData.name.length : 0;
+    },
+    descriptionCharCount() {
+      return this.objData.description[0].content ? this.objData.description[0].content.length : 0;
+    }
+  },
   watch: {},
   methods: {
     ...mapActions(["addSolution", "loadings","detailSolution","listLanguage"]),
@@ -105,6 +125,8 @@ export default {
       this.errors = [];
       if(this.objData.name == '') this.errors.push('Tên không được để trống');
       if(this.objData.content[0].content == '') this.errors.push('Nội dung không được để trống');
+      if(this.objData.name.length > 60) this.errors.push('Tên dịch vụ không được vượt quá 60 ký tự');
+      if(this.objData.description[0].content.length > 160) this.errors.push('Mô tả ngắn không được vượt quá 160 ký tự');
      if(this.objData.images.length == 0) this.errors.push('Chọn ảnh');
       if (this.errors.length > 0) {
         this.errors.forEach((value, key) => {
